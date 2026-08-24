@@ -1,16 +1,12 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avv. Marco Valentinotti</title>
+  <title>Avv. Marco Valentinotti | Studio Legale</title>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="apple-touch-icon.png">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Avv. Valentinotti">
   <meta name="theme-color" content="#0a1628">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,409 +15,31 @@
     *{box-sizing:border-box;margin:0;padding:0}
     :root{--navy:#0a1628;--navy-mid:#122238;--gold:#c5a86d;--gold-light:#e2d3af;--gray-light:#f4f5f7;--text-dark:#222;--text-muted:#666;--white:#fff;--shadow:0 10px 30px rgba(10,22,40,0.08)}
     body{font-family:'Jost',sans-serif;background:var(--gray-light);color:var(--text-dark);line-height:1.6}
+    header{background:var(--navy);color:var(--white);padding:3rem 1rem;text-align:center;border-bottom:3px solid var(--gold)}
+    h1{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--gold);margin-bottom:.5rem;font-weight:500}
+    .subtitle{color:var(--gold-light);font-size:1.1rem;letter-spacing:1px;text-transform:uppercase}
+    main{max-width:900px;margin:3rem auto;padding:0 1.5rem}
+    .card{background:var(--white);padding:2.5rem;border-radius:8px;box-shadow:var(--shadow);margin-bottom:2rem}
+    h2{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:2rem;margin-bottom:1rem}
+    p.content{color:var(--text-muted);font-size:1.05rem;line-height:1.8;margin-bottom:1rem}
+    footer{text-align:center;padding:2rem;background:var(--navy);color:var(--gold-light);font-size:0.9rem}
   </style>
 </head>
-Clicca sul pulsante verde Commit changes... in alto a destra per salvare.
-
-Fatto questo, ricarica il sito con CTRL + F5 e quella brutta scritta sparirà per sempre.
-.nav-text .avv{font-size:8px;letter-spacing:3px;color:#c9a84c;font-weight:500;text-transform:uppercase}
-.nav-text .nm{font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:1px}
-.nav-text .cg{font-size:13px;font-weight:600;color:#fff;font-family:Georgia,serif;letter-spacing:.5px}
-nav ul{list-style:none;display:flex}
-nav ul li a{display:block;padding:.9rem .85rem;color:rgba(255,255,255,0.75);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:all .2s;cursor:pointer}
-nav ul li a:hover,nav ul li a.active{color:var(--gold);border-bottom-color:var(--gold)}
-.screen{display:none}.screen.active{display:block}
-.install-banner{background:var(--navy-mid);padding:1rem 1.5rem;display:none;align-items:center;justify-content:space-between;gap:1rem}
-.install-banner p{font-size:13px;color:rgba(255,255,255,0.9);line-height:1.4}
-.install-banner strong{color:var(--gold)}
-.btn-install{background:var(--gold);color:var(--navy);padding:.6rem 1.4rem;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;flex-shrink:0}
-.btn-close-b{background:none;border:none;color:rgba(255,255,255,0.4);font-size:20px;cursor:pointer;padding:0;flex-shrink:0}
-.home-hero{background:var(--navy);padding:4rem 2.5rem 3.5rem;position:relative;overflow:hidden}
-.home-hero::before{content:"";position:absolute;top:-60px;right:-60px;width:300px;height:300px;border:1px solid rgba(201,168,76,0.1);border-radius:50%}
-.home-hero::after{content:"";position:absolute;top:-30px;right:-30px;width:200px;height:200px;border:1px solid rgba(201,168,76,0.08);border-radius:50%}
-.hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
-.hero-title{font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:300;color:var(--white);line-height:1.15;margin-bottom:.5rem}
-.hero-title em{color:var(--gold);font-style:italic}
-.hero-subtitle{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.55);letter-spacing:.5px;margin-bottom:2rem}
-.hero-divider{width:60px;height:1px;background:var(--gold);margin-bottom:1.5rem}
-.hero-quote{font-family:"Cormorant Garamond",serif;font-size:18px;font-style:italic;color:rgba(255,255,255,0.8);line-height:1.6;max-width:520px;border-left:2px solid var(--gold);padding-left:1.2rem}
-.hero-cta{margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap}
-.btn-gold{background:var(--gold);color:var(--navy);padding:.7rem 1.8rem;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s}
-.btn-gold:hover{background:var(--gold-light)}
-.btn-outline{background:transparent;color:var(--gold);padding:.7rem 1.8rem;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--gold);cursor:pointer;transition:all .2s}
-.home-intro{padding:3rem 2.5rem}
-.section-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;font-weight:500}
-.intro-text{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:300;line-height:1.7;color:var(--text-dark);max-width:680px}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--gray-mid);margin-top:2.5rem}
-.value-item{padding:1.8rem 1.5rem;border-right:1px solid var(--gray-mid)}
-.value-item:last-child{border-right:none}
-.value-icon{width:32px;height:2px;background:var(--gold);margin-bottom:1rem}
-.value-title{font-family:"Cormorant Garamond",serif;font-size:17px;font-weight:500;color:var(--navy);margin-bottom:.5rem}
-.value-desc{font-size:13px;color:var(--gray-text);line-height:1.6}
-.page-header{background:var(--navy-mid);padding:2.5rem 2.5rem 2rem}
-.page-header h2{font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:300;color:var(--white);margin-bottom:.3rem}
-.page-header p{font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:.5px}
-.aree-content{padding:2rem 2.5rem}
-.area-block{margin-bottom:1.5rem;border:1px solid var(--gray-mid)}
-.area-header{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.5rem;background:var(--navy);cursor:pointer;transition:background .2s}
-.area-header:hover{background:var(--navy-light)}
-.area-name{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:400;color:var(--white)}
-.area-toggle{color:var(--gold);font-size:18px;transition:transform .3s}
-.area-block.open .area-toggle{transform:rotate(45deg)}
-.area-sub{display:none;padding:1rem 1.5rem 1.5rem}
-.area-block.open .area-sub{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
-.sub-item{display:flex;align-items:center;gap:.7rem;padding:.6rem .8rem;background:var(--gray-light);font-size:13px;color:var(--text-dark)}
-.sub-item::before{content:"";width:3px;height:3px;background:var(--gold);border-radius:50%;flex-shrink:0}
-.area-single{display:flex;align-items:center;gap:.8rem;padding:1.2rem 1.5rem;background:var(--navy);margin-bottom:1px}
-.area-single span{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:400;color:var(--white)}
-.come-content{padding:2.5rem}
-.step-list{display:flex;flex-direction:column}
-.step-item{display:flex;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid var(--gray-mid)}
-.step-item:last-child{border-bottom:none}
-.step-num{flex-shrink:0;width:44px;height:44px;background:var(--navy);color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:500;display:flex;align-items:center;justify-content:center}
-.step-body h3{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:500;color:var(--navy);margin-bottom:.5rem}
-.step-body p{font-size:13.5px;color:var(--gray-text);line-height:1.65}
-.step-body ul{margin-top:.6rem;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:.3rem}
-.step-body ul li{font-size:13px;color:var(--gray-text);display:flex;align-items:center;gap:.5rem}
-.step-body ul li::before{content:"";width:4px;height:1px;background:var(--gold)}
-.info-box{background:var(--navy);padding:1.5rem 2rem;margin-top:2rem;display:flex;gap:1.2rem;align-items:flex-start}
-.info-box i{color:var(--gold);font-size:22px;flex-shrink:0;margin-top:2px}
-.info-box p{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.65}
-.info-box strong{color:var(--gold)}
-.contatti-wrap{background:var(--navy);padding:2.5rem}
-.contatti-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.contact-card{border:1px solid rgba(201,168,76,0.25);padding:1.5rem;background:var(--navy-mid)}
-.contact-card .cc-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;font-weight:500}
-.contact-card .cc-value{font-family:"Cormorant Garamond",serif;font-size:17px;color:var(--white);margin-bottom:1rem;line-height:1.4}
-.btn-action{display:flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.2rem;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;transition:background .2s;width:100%;justify-content:center}
-.btn-action:hover{background:var(--gold-light)}
-.msg-content{padding:2.5rem}
-.form-group{margin-bottom:1.2rem}
-.form-group label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-text);margin-bottom:.5rem;font-weight:500}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:.7rem 1rem;border:1px solid var(--gray-mid);background:var(--white);font-family:"Jost",sans-serif;font-size:14px;color:var(--text-dark);outline:none;transition:border .2s}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
-.form-group textarea{resize:vertical;min-height:130px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.form-privacy{display:flex;align-items:flex-start;gap:.7rem;margin:1rem 0}
-.form-privacy input{margin-top:3px;accent-color:var(--gold);flex-shrink:0}
-.form-privacy label{font-size:12px;color:var(--gray-text);line-height:1.5;cursor:pointer}
-.submit-row{display:flex;align-items:center;gap:1rem;margin-top:1rem}
-.success-msg{display:none;background:var(--navy);color:var(--gold);padding:.7rem 1.2rem;font-size:13px;align-items:center;gap:.5rem}
-@media(max-width:620px){nav ul li a{padding:.9rem .5rem;font-size:9px;letter-spacing:.5px}.values-grid,.contatti-grid,.form-row{grid-template-columns:1fr}.value-item{border-right:none;border-bottom:1px solid var(--gray-mid)}.hero-title{font-size:30px}}
-
-.wa-float{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);cursor:pointer;text-decoration:none;transition:transform .2s}
-.wa-float:hover{transform:scale(1.08)}
-.wa-float svg{width:30px;height:30px;fill:#fff}
-.wa-tooltip{position:absolute;right:66px;background:#25d366;color:#fff;font-family:"Jost",sans-serif;font-size:12px;font-weight:500;white-space:nowrap;padding:6px 12px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .2s}
-.wa-float:hover .wa-tooltip{opacity:1}
-.wa-channel-banner{background:linear-gradient(135deg,#1e5799 0%,#0d3d6b 100%);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.wa-channel-banner h3{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:400;color:#fff;margin-bottom:.4rem}
-.wa-channel-banner p{font-size:13px;color:rgba(255,255,255,0.7);line-height:1.5;max-width:480px}
-.wc-icon{flex-shrink:0;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.wc-icon svg{width:28px;height:28px;fill:#fff}
-.btn-wa-channel{display:inline-flex;align-items:center;gap:.5rem;background:#25d366;color:#fff;padding:.65rem 1.4rem;font-family:"Jost",sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s;flex-shrink:0}
-.btn-wa-channel:hover{background:#1da851}
-.btn-wa-channel svg{width:18px;height:18px;fill:#fff}
-
-.news-section{padding:3rem 2.5rem;background:var(--gray-light)}
-.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
-.news-card{background:var(--white);border-top:3px solid var(--gold);padding:1.5rem;cursor:pointer;transition:box-shadow .2s;display:flex;flex-direction:column}
-.news-card:hover{box-shadow:0 4px 20px rgba(10,22,40,0.12)}
-.news-card .nc-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.6rem}
-.news-card .nc-title{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:500;color:var(--navy);line-height:1.3;margin-bottom:.8rem}
-.news-card .nc-date{font-size:11px;color:var(--gray-text);margin-bottom:.8rem}
-.news-card .nc-excerpt{font-size:13px;color:var(--gray-text);line-height:1.6;flex:1}
-.news-card .nc-link{margin-top:1rem;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:.4rem}
-.news-card .nc-link::after{content:"\2192"}
-
-/* Pagina articolo */
-.article-header{background:var(--navy-mid);padding:3rem 2.5rem 2rem}
-.article-header .a-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1rem}
-.article-header h1{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:300;color:var(--white);line-height:1.3;margin-bottom:1rem;max-width:680px}
-.article-header .a-meta{font-size:12px;color:rgba(255,255,255,0.5)}
-.article-body{padding:2.5rem;max-width:720px}
-.article-body p{font-size:15px;line-height:1.8;color:var(--text-dark);margin-bottom:1.4rem}
-.article-body h2{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:500;color:var(--navy);margin:2rem 0 .8rem}
-.article-body .highlight-box{background:var(--gray-light);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:14px;color:var(--text-dark);line-height:1.6}
-.btn-back{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;background:none;padding:0;margin-bottom:1.5rem}
-.btn-back::before{content:"\2190"}
-@media(max-width:620px){.news-grid{grid-template-columns:1fr}}
-</style>
-</head>
 <body>
-<div id="app">
-<nav>
-  <div class="nav-brand">
-    <svg viewBox="0 0 52 64" height="48" xmlns="http://www.w3.org/2000/svg">
-  <path d="M2,2 L50,2 L50,34 Q50,54 26,62 Q2,54 2,34 Z" fill="#1e5799" stroke="#c9a84c" stroke-width="2.5"/>
-  <text x="26" y="16" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="7.5" fill="#c9a84c" letter-spacing="1.5">AVVOCATO</text>
-  <line x1="8" y1="20" x2="44" y2="20" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
-  <text x="26" y="37" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="18" fill="#c9a84c" letter-spacing="2">MV</text>
-  <line x1="8" y1="42" x2="44" y2="42" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
-  <polygon points="11,52 12.8,47 14.6,52 10,49 15.6,49" fill="#c9a84c"/>
-  <polygon points="20,52 21.8,47 23.6,52 19,49 24.6,49" fill="#c9a84c"/>
-  <polygon points="29,52 30.8,47 32.6,52 28,49 33.6,49" fill="#c9a84c"/>
-  <polygon points="38,52 39.8,47 41.6,52 37,49 42.6,49" fill="#c9a84c"/>
-</svg>
-    <div class="nav-text">
-      <span class="avv">Avvocato</span>
-      <span class="nm">Marco</span>
-      <span class="cg">Valentinotti</span>
+  <header>
+    <h1>Avv. Marco Valentinotti</h1>
+    <div class="subtitle">Studio Legale - Consulenza e Assistenza Giudiziale e Stragiudiziale</div>
+  </header>
+  
+  <main>
+    <div class="card">
+      <h2>Benvenuti nello Studio</h2>
+      <p class="content">Lo Studio Legale dell'Avv. Marco Valentinotti offre assistenza e consulenza legale mirata, garantendo professionalità, competenza e massima riservatezza per ogni esigenza del cliente, sia in ambito giudiziale che stragiudiziale.</p>
     </div>
-  </div>
-  <ul>
-    <li><a onclick="show('home')" class="active" id="nav-home">Home</a></li>
-    <li><a onclick="show('aree')" id="nav-aree">Aree</a></li>
-    <li><a onclick="show('come')" id="nav-come">Approccio</a></li>
-    <li><a onclick="show('contatti')" id="nav-contatti">Contatti</a></li>
-    <li><a onclick="show('messaggio')" id="nav-messaggio">Scrivici</a></li>
-  </ul>
-</nav>
+  </main>
 
-<!-- BANNER INSTALLA APP - appare solo su Android/Chrome automaticamente -->
-<div class="install-banner" id="install-banner">
-  <p><strong>&#128241; Installa l'App</strong> dello Studio sulla tua schermata Home</p>
-  <button class="btn-install" id="btn-install">&#43; Installa</button>
-  <button class="btn-close-b" onclick="document.getElementById('install-banner').style.display='none'">&#10005;</button>
-</div>
-
-<div id="screen-home" class="screen active">
-  <div class="home-hero">
-    <div class="hero-eyebrow">Avvocato &middot; Roma</div>
-    <div class="hero-title">Marco<br><em>Valentinotti</em></div>
-    <div class="hero-subtitle">Consulenza legale professionale</div>
-    <div class="hero-divider"></div>
-    <div class="hero-quote">La tutela dei vostri diritti &egrave; il nostro mandato. Ogni cliente &egrave; una storia unica che merita ascolto, competenza e dedizione assoluta.</div>
-    <div class="hero-cta">
-      <button class="btn-gold" onclick="show('contatti')">Richiedi Consulenza</button>
-      <button class="btn-outline" onclick="show('aree')">Aree di Attivit&agrave;</button>
-    </div>
-  </div>
-  <div class="home-intro">
-    <div class="section-label">Lo Studio</div>
-    <p class="intro-text">Con sede nel cuore di Roma, l'Avvocato Valentinotti affianca privati, famiglie e imprese in ogni percorso legale con rigore professionale, riservatezza e trasparenza.</p>
-    <div class="values-grid">
-      <div class="value-item"><div class="value-icon"></div><div class="value-title">Competenza</div><div class="value-desc">Formazione continua e specializzazione approfondita in ogni area di attivit&agrave;.</div></div>
-      <div class="value-item"><div class="value-icon"></div><div class="value-title">Riservatezza</div><div class="value-desc">Massima discrezione garantita in ogni fase del mandato professionale.</div></div>
-      <div class="value-item"><div class="value-icon"></div><div class="value-title">Trasparenza</div><div class="value-desc">Costi chiari e comunicazione diretta senza sorprese, fin dal primo incontro.</div></div>
-    </div>
-  </div>
-
-<div class="news-section">
-  <div class="section-label">Aggiornamenti</div>
-  <div class="intro-text" style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--text-dark)">News e Approfondimenti Legali</div>
-  <div class="news-grid">
-    <div class="news-card" onclick="showArticle('art1')">
-      <div class="nc-cat">Diritto di Famiglia</div>
-      <div class="nc-title">Separazione e affido condiviso: cosa cambia con le nuove norme</div>
-      <div class="nc-date">15 Maggio 2026</div>
-      <div class="nc-excerpt">La riforma Cartabia ha introdotto importanti novit&agrave; in materia di separazione e divorzio. Scopri come tutelare i tuoi diritti e quelli dei tuoi figli.</div>
-      <div class="nc-link">Leggi l&rsquo;articolo</div>
-    </div>
-    <div class="news-card" onclick="showArticle('art2')">
-      <div class="nc-cat">Diritto del Lavoro</div>
-      <div class="nc-title">Licenziamento illegittimo: diritti e tutele del lavoratore</div>
-      <div class="nc-date">28 Aprile 2026</div>
-      <div class="nc-excerpt">Cosa fare se si &egrave; stati licenziati senza giusta causa? Una guida pratica sui tempi, le tutele e le indennit&agrave; previste dalla legge italiana.</div>
-      <div class="nc-link">Leggi l&rsquo;articolo</div>
-    </div>
-    <div class="news-card" onclick="showArticle('art3')">
-      <div class="nc-cat">Diritto Condominiale</div>
-      <div class="nc-title">Liti condominiali: come risolvere le controversie senza andare in tribunale</div>
-      <div class="nc-date">10 Aprile 2026</div>
-      <div class="nc-excerpt">La mediazione &egrave; spesso obbligatoria nelle controversie condominiali. Ecco come funziona e perch&eacute; pu&ograve; essere la scelta pi&ugrave; conveniente.</div>
-      <div class="nc-link">Leggi l&rsquo;articolo</div>
-    </div>
-  </div>
-</div>
-</div>
-
-<div id="screen-articolo" class="screen">
-  <div class="article-header" id="art-header">
-    <button class="btn-back" onclick="show('home')">Torna alle News</button>
-    <div class="a-cat" id="art-cat"></div>
-    <h1 id="art-title"></h1>
-    <div class="a-meta" id="art-meta"></div>
-  </div>
-  <div class="article-body" id="art-body"></div>
-</div>
-
-<div id="screen-aree" class="screen">
-  <div class="page-header"><p class="section-label">Specializzazioni</p><h2>Aree di Attivit&agrave;</h2><p>Competenze multidisciplinari al servizio del cliente</p></div>
-  <div class="aree-content">
-    <div class="area-block" id="area-civile">
-      <div class="area-header" onclick="toggleArea('area-civile')"><span class="area-name">Diritto Civile</span><span class="area-toggle">+</span></div>
-      <div class="area-sub">
-        <div class="sub-item">Diritto di Famiglia</div><div class="sub-item">Risarcimento Danni</div>
-        <div class="sub-item">Contrattualistica e Locazioni</div><div class="sub-item">Diritto Condominiale</div>
-      </div>
-    </div>
-    <div class="area-single" style="margin-bottom:1px"><span>Diritto del Lavoro</span></div>
-    <div class="area-single" style="margin-bottom:1px"><span>Diritto Previdenziale</span></div>
-    <div class="area-single" style="margin-bottom:1px"><span>Diritto Tributario</span></div>
-    <div class="area-single"><span>Diritto dell'Immigrazione</span></div>
-  </div>
-</div>
-<div id="screen-come" class="screen">
-  <div class="page-header"><p class="section-label">Il Metodo</p><h2>Come Lavoro</h2><p>Un percorso chiaro, trasparente e orientato al risultato</p></div>
-  <div class="come-content">
-    <div class="step-list">
-      <div class="step-item"><div class="step-num">01</div><div class="step-body"><h3>Primo Contatto</h3><p>Il cliente contatta lo studio telefonicamente o via email per fissare un appuntamento.</p></div></div>
-      <div class="step-item"><div class="step-num">02</div><div class="step-body"><h3>Prima Consulenza &mdash; Cosa Portare</h3><p>Per permettere una valutazione precisa, &egrave; utile portare:</p><ul><li>Documento d'identit&agrave; in corso di validit&agrave;</li><li>Codice fiscale</li><li>Documentazione relativa alla vicenda</li><li>Eventuali atti giudiziari gi&agrave; ricevuti</li></ul></div></div>
-      <div class="step-item"><div class="step-num">03</div><div class="step-body"><h3>Analisi e Strategia</h3><p>Illustro le opzioni disponibili, i tempi stimati e i costi previsti. Ogni onorario viene concordato in anticipo e formalizzato per iscritto.</p></div></div>
-      <div class="step-item"><div class="step-num">04</div><div class="step-body"><h3>Aggiornamento Costante</h3><p>Il cliente viene tenuto informato ad ogni sviluppo con comunicazione diretta e comprensibile.</p></div></div>
-    </div>
-    <div class="info-box"><i class="ti ti-lock"></i><p><strong>Riservatezza assoluta garantita.</strong> Tutte le informazioni sono coperte dal segreto professionale nel pieno rispetto del GDPR.</p></div>
-  </div>
-</div>
-<div id="screen-contatti" class="screen">
-  <div class="page-header"><p class="section-label">Recapiti</p><h2>Contatti</h2><p>Sono a Roma, pronto ad ascoltarvi</p></div>
-  <div class="contatti-wrap">
-    <div class="contatti-grid">
-      <div class="contact-card"><div class="cc-label">Indirizzo</div><div class="cc-value">Viale delle Medaglie d'Oro, 266<br>00136 Roma (RM)</div><a class="btn-action" href="https://maps.google.com/?q=Viale+delle+Medaglie+d'Oro+266+Roma" target="_blank"><i class="ti ti-map-pin"></i> Apri in Maps</a></div>
-      <div class="contact-card"><div class="cc-label">Telefono</div><div class="cc-value">392 553 6295</div><a class="btn-action" href="tel:+393925536295"><i class="ti ti-phone"></i> Chiama Ora</a></div>
-      <div class="contact-card"><div class="cc-label">WhatsApp</div><div class="cc-value">392 553 6295</div><a class="btn-action" href="https://wa.me/393925536295?text=Salve%20Avvocato%20Valentinotti%2C%20vorrei%20richiedere%20una%20consulenza." target="_blank" style="background:#25d366;color:#fff"><i class="ti ti-brand-whatsapp"></i> Scrivici su WhatsApp</a></div>
-      <div class="contact-card"><div class="cc-label">Email</div><div class="cc-value">marcovalentinotti@gmail.com</div><a class="btn-action" href="mailto:marcovalentinotti@gmail.com?subject=Richiesta%20di%20Consulenza"><i class="ti ti-mail"></i> Invia un'Email</a></div>
-      <div class="contact-card"><div class="cc-label">Orari</div><div class="cc-value" style="font-size:14px">Lun &ndash; Ven: 9:00 &ndash; 18:00<br>Su appuntamento</div><button class="btn-action" onclick="show('messaggio')"><i class="ti ti-calendar"></i> Richiedi Appuntamento</button></div>
-    </div>
-  </div>
-</div>
-<div id="screen-messaggio" class="screen">
-  <div class="page-header"><p class="section-label">Modulo di Contatto</p><h2>Scrivimi</h2><p>Rispondo entro un giorno lavorativo</p></div>
-  <div class="msg-content">
-    <div class="form-row">
-      <div class="form-group"><label>Nome</label><input type="text" id="f-nome" placeholder="Mario"></div>
-      <div class="form-group"><label>Cognome</label><input type="text" id="f-cognome" placeholder="Rossi"></div>
-    </div>
-    <div class="form-row">
-      <div class="form-group"><label>Telefono</label><input type="tel" id="f-tel" placeholder="+39 320 000 0000"></div>
-      <div class="form-group"><label>Email</label><input type="email" id="f-email" placeholder="mario@email.it"></div>
-    </div>
-    <div class="form-group"><label>Area di Interesse</label>
-      <select id="f-area">
-        <option value="">&#8212; Seleziona un'area &#8212;</option>
-        <option>Diritto Civile &#8211; Diritto di Famiglia</option><option>Diritto Civile &#8211; Risarcimento Danni</option>
-        <option>Diritto Civile &#8211; Contrattualistica e Locazioni</option><option>Diritto Civile &#8211; Condominio</option>
-        <option>Diritto del Lavoro</option><option>Diritto Previdenziale</option>
-        <option>Diritto Tributario</option><option>Diritto dell'Immigrazione</option><option>Altro</option>
-      </select>
-    </div>
-    <div class="form-group"><label>Messaggio</label><textarea id="f-msg" placeholder="Descrivi brevemente la tua situazione."></textarea></div>
-    <div class="form-privacy"><input type="checkbox" id="f-privacy"><label for="f-privacy">Acconsento al trattamento dei miei dati personali ai sensi del D.Lgs. 196/2003 e del GDPR.</label></div>
-    <div class="submit-row">
-      <button class="btn-gold" onclick="submitForm()">Invia Messaggio</button>
-      <div class="success-msg" id="success-msg"><i class="ti ti-check"></i> Messaggio ricevuto &#8212; risponder&ograve; presto.</div>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="wa-channel-banner">
-  <div class="wc-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.524 5.835L.057 23.885l6.218-1.632A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.88 9.88 0 01-5.031-1.377l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12C2.118 6.534 6.534 2.118 12 2.118S21.882 6.534 21.882 12 17.466 21.882 12 21.882z"/></svg></div>
-  <div>
-    <h3>Iscriviti al Canale WhatsApp</h3>
-    <p>Rimani aggiornato su novit&agrave; legali, consigli pratici e approfondimenti dello Studio Valentinotti direttamente su WhatsApp.</p>
-  </div>
-  <a class="btn-wa-channel" href="https://whatsapp.com/channel/0029Vb95ekqF1YlJ3AN9fn1q" target="_blank">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.524 5.835L.057 23.885l6.218-1.632A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.88 9.88 0 01-5.031-1.377l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12C2.118 6.534 6.534 2.118 12 2.118S21.882 6.534 21.882 12 17.466 21.882 12 21.882z"/></svg> Iscriviti ora
-  </a>
-</div>
-<script>
-if("serviceWorker" in navigator){
-  navigator.serviceWorker.register("/sw.js").catch(function(){});
-}
-
-var deferredPrompt = null;
-window.addEventListener("beforeinstallprompt", function(e){
-  e.preventDefault();
-  deferredPrompt = e;
-  var banner = document.getElementById("install-banner");
-  banner.style.display = "flex";
-});
-window.addEventListener("appinstalled", function(){
-  document.getElementById("install-banner").style.display = "none";
-});
-document.getElementById("btn-install").addEventListener("click", function(){
-  if(deferredPrompt){
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(function(){
-      deferredPrompt = null;
-      document.getElementById("install-banner").style.display = "none";
-    });
-  }
-});
-
-function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));document.querySelectorAll("nav ul li a").forEach(a=>a.classList.remove("active"));document.getElementById("screen-"+id).classList.add("active");var el=document.getElementById("nav-"+id);if(el)el.classList.add("active");window.scrollTo(0,0);}
-function toggleArea(id){document.getElementById(id).classList.toggle("open")}
-function submitForm(){var nome=document.getElementById("f-nome").value.trim();var email=document.getElementById("f-email").value.trim();var privacy=document.getElementById("f-privacy").checked;if(!nome||!email){alert("Inserisci almeno nome ed email.");return;}if(!privacy){alert("\u00c8 necessario accettare la privacy policy.");return;}var subject=encodeURIComponent("Richiesta di Consulenza da "+nome);var area=document.getElementById("f-area").value;var msg=document.getElementById("f-msg").value;var body=encodeURIComponent("Nome: "+nome+" "+document.getElementById("f-cognome").value+"\nTel: "+document.getElementById("f-tel").value+"\nArea: "+area+"\n\nMessaggio:\n"+msg);window.location.href="mailto:marcovalentinotti@gmail.com?subject="+subject+"&body="+body;document.getElementById("success-msg").style.display="flex";}
-
-var articles = {
-  art1: {
-    cat: 'Diritto di Famiglia',
-    title: 'Separazione e affido condiviso: cosa cambia con le nuove norme',
-    date: '15 Maggio 2026 &mdash; Avv. Marco Valentinotti',
-    body: `
-      <p>La riforma Cartabia (D.Lgs. 149/2022) ha profondamente modificato le regole processuali in materia di separazione e divorzio, con particolare attenzione alla tutela dei minori e alla rapidit&agrave; dei procedimenti.</p>
-      <h2>Cosa prevede la riforma</h2>
-      <p>Il nuovo rito unificato per i procedimenti di famiglia semplifica l'iter giudiziario e introduce udienze presidenziali pi&ugrave; strutturate. L'obiettivo principale &egrave; ridurre i tempi dei procedimenti e favorire accordi tra le parti.</p>
-      <div class="highlight-box">
-        <strong>Da sapere:</strong> L'affido condiviso rimane la regola generale. L'affido esclusivo &egrave; disposto solo quando l'affido condiviso sia contrario all'interesse del minore.
-      </div>
-      <h2>I diritti dei figli</h2>
-      <p>La nuova normativa rafforza il diritto del minore a mantenere rapporti significativi con entrambi i genitori e con i parenti, inclusi i nonni. Il giudice pu&ograve; ora disporre specifici percorsi di mediazione familiare.</p>
-      <h2>Cosa fare</h2>
-      <p>Se stai affrontando una separazione, &egrave; fondamentale affidarsi a un professionista per valutare la situazione concreta e individuare la strategia pi&ugrave; adatta. Contattaci per una prima consulenza riservata.</p>
-    `
-  },
-  art2: {
-    cat: 'Diritto del Lavoro',
-    title: 'Licenziamento illegittimo: diritti e tutele del lavoratore',
-    date: '28 Aprile 2026 &mdash; Avv. Marco Valentinotti',
-    body: `
-      <p>Ricevere una lettera di licenziamento &egrave; sempre un momento difficile. &Egrave; fondamentale sapere che la legge italiana prevede tutele importanti per il lavoratore, a seconda del tipo di rapporto di lavoro e delle dimensioni aziendali.</p>
-      <h2>Licenziamento per giusta causa e giustificato motivo</h2>
-      <p>Il datore di lavoro pu&ograve; licenziare solo per giusta causa (mancanza grave che non consente la prosecuzione del rapporto) o per giustificato motivo soggettivo (inadempimento degli obblighi contrattuali) o oggettivo (ragioni economiche/organizzative).</p>
-      <div class="highlight-box">
-        <strong>Attenzione ai termini:</strong> Per impugnare un licenziamento hai 60 giorni dalla comunicazione per inviare l'impugnazione stragiudiziale e 180 giorni per depositare il ricorso in tribunale.
-      </div>
-      <h2>Le tutele previste</h2>
-      <p>A seconda delle dimensioni aziendali e della data di assunzione, il lavoratore pu&ograve; avere diritto alla reintegrazione nel posto di lavoro oppure a un'indennit&agrave; risarcitoria compresa tra 2 e 12 mensilit&agrave; dell'ultima retribuzione globale di fatto.</p>
-      <h2>Come tutelarsi</h2>
-      <p>Non aspettare: i termini per agire sono brevi. Contattaci immediatamente per una valutazione gratuita della tua situazione.</p>
-    `
-  },
-  art3: {
-    cat: 'Diritto Condominiale',
-    title: 'Liti condominiali: come risolvere le controversie senza andare in tribunale',
-    date: '10 Aprile 2026 &mdash; Avv. Marco Valentinotti',
-    body: `
-      <p>Le controversie condominiali sono tra le pi&ugrave; frequenti in Italia. Rumori, lavori non autorizzati, ripartizione delle spese: i motivi di lite tra condomini sono molteplici. Ma non sempre &egrave; necessario ricorrere al tribunale.</p>
-      <h2>La mediazione obbligatoria</h2>
-      <p>Per molte controversie condominiali la mediazione &egrave; condizione di procedibilit&agrave;: senza averla tentata, il giudice non pu&ograve; procedere. Questo strumento, gestito da organismi accreditati, permette spesso di trovare un accordo in tempi rapidi e con costi contenuti.</p>
-      <div class="highlight-box">
-        <strong>I vantaggi della mediazione:</strong> Tempi brevi (max 3 mesi), costi inferiori al processo, riservatezza totale, possibilit&agrave; di trovare soluzioni creative che un giudice non potrebbe imporre.
-      </div>
-      <h2>Quando &egrave; necessario il tribunale</h2>
-      <p>Se la mediazione fallisce o non &egrave; prevista, si procede con il ricorso al giudice. In questi casi &egrave; essenziale avere al proprio fianco un avvocato esperto che conosca la normativa condominiale e la giurisprudenza pi&ugrave; recente.</p>
-      <h2>Il nostro supporto</h2>
-      <p>Lo Studio Valentinotti assiste condomini e singoli condomini in tutte le fasi della controversia, dalla mediazione al giudizio. Contattaci per una prima analisi della tua situazione.</p>
-    `
-  }
-};
-
-function showArticle(id) {
-  var a = articles[id];
-  document.getElementById('art-cat').innerHTML = a.cat;
-  document.getElementById('art-title').innerHTML = a.title;
-  document.getElementById('art-meta').innerHTML = a.date;
-  document.getElementById('art-body').innerHTML = a.body;
-  show('articolo');
-}
-
-</script>
-<a class="wa-float" href="https://wa.me/393925536295?text=Salve%20Avvocato%20Valentinotti%2C%20vorrei%20richiedere%20una%20consulenza." target="_blank" aria-label="WhatsApp">
-  <span class="wa-tooltip">Scrivici su WhatsApp</span>
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.524 5.835L.057 23.885l6.218-1.632A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.88 9.88 0 01-5.031-1.377l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12C2.118 6.534 6.534 2.118 12 2.118S21.882 6.534 21.882 12 17.466 21.882 12 21.882z"/></svg>
-</a>
+  <footer>
+    <p>&copy; Avv. Marco Valentinotti - Tutti i diritti riservati</p>
+  </footer>
 </body>
 </html>
