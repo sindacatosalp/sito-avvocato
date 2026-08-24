@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Avv. Valentinotti">
   <meta name="theme-color" content="#0a1628">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -22,6 +26,9 @@
     .card{background:var(--white);padding:2.5rem;border-radius:8px;box-shadow:var(--shadow);margin-bottom:2rem}
     h2{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:2rem;margin-bottom:1rem}
     p.content{color:var(--text-muted);font-size:1.05rem;line-height:1.8;margin-bottom:1rem}
+    .whatsapp-box{background:#eef6ed;border-left:4px solid #25d366;padding:1.5rem;border-radius:0 8px 8px 0;margin-top:1.5rem}
+    .whatsapp-box h3{color:#128c7e;font-family:'Cormorant Garamond',serif;font-size:1.5rem;margin-bottom:.5rem}
+    .whatsapp-btn{display:inline-block;background:#25d366;color:#fff;padding:.7rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:500;margin-top:1rem}
     footer{text-align:center;padding:2rem;background:var(--navy);color:var(--gold-light);font-size:0.9rem}
   </style>
 </head>
@@ -35,6 +42,17 @@
     <div class="card">
       <h2>Benvenuti nello Studio</h2>
       <p class="content">Lo Studio Legale dell'Avv. Marco Valentinotti offre assistenza e consulenza legale mirata, garantendo professionalità, competenza e massima riservatezza per ogni esigenza del cliente, sia in ambito giudiziale che stragiudiziale.</p>
+    </div>
+
+    <div class="card">
+      <h2>News e Aggiornamenti</h2>
+      <p class="content">Segui tutte le ultime novità giuridiche, gli aggiornamenti normativi e le comunicazioni ufficiali dello studio direttamente sul nostro canale dedicato.</p>
+      
+      <div class="whatsapp-box">
+        <h3>Canale WhatsApp Ufficiale</h3>
+        <p class="content" style="margin-bottom:0;">Rimani in contatto con lo studio e ricevi gli aggiornamenti in tempo reale iscrivendoti al nostro canale WhatsApp.</p>
+        <a href="https://whatsapp.com" target="_blank" class="whatsapp-btn"><i class="ti ti-brand-whatsapp"></i> Unisciti al Canale WhatsApp</a>
+      </div>
     </div>
   </main>
 
