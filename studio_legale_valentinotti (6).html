@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avv. Marco Valentinotti</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Avv. Valentinotti">
+<meta name="theme-color" content="#0a1628">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a1628;--navy-mid:#112240;--navy-light:#1a3a5c;--gold:#c9a84c;--gold-light:#e2c97e;--white:#ffffff;--gray-light:#f4f5f7;--gray-mid:#e8eaed;--gray-text:#6b7280;--text-dark:#1a1a2e}
+body{font-family:"Jost",sans-serif;background:var(--gray-light);color:var(--text-dark)}
+#app{max-width:900px;margin:0 auto;background:var(--white);box-shadow:0 0 40px rgba(10,22,40,0.12)}
+nav{background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(201,168,76,0.3)}
+.nav-brand{display:flex;align-items:center;padding:.5rem 0;gap:10px}
+.nav-text{display:flex;flex-direction:column;gap:1px}
+.nav-text .avv{font-size:8px;letter-spacing:3px;color:#c9a84c;font-weight:500;text-transform:uppercase}
+.nav-text .nm{font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:1px}
+.nav-text .cg{font-size:13px;font-weight:600;color:#fff;font-family:Georgia,serif;letter-spacing:.5px}
+nav ul{list-style:none;display:flex}
+nav ul li a{display:block;padding:.9rem .85rem;color:rgba(255,255,255,0.75);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;transition:all .2s;cursor:pointer}
+nav ul li a:hover,nav ul li a.active{color:var(--gold);border-bottom-color:var(--gold)}
+.screen{display:none}.screen.active{display:block}
+.install-banner{background:var(--navy-mid);padding:1rem 1.5rem;display:none;align-items:center;justify-content:space-between;gap:1rem}
+.install-banner p{font-size:13px;color:rgba(255,255,255,0.9);line-height:1.4}
+.install-banner strong{color:var(--gold)}
+.btn-install{background:var(--gold);color:var(--navy);padding:.6rem 1.4rem;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.btn-close-b{background:none;border:none;color:rgba(255,255,255,0.4);font-size:20px;cursor:pointer;padding:0;flex-shrink:0}
+.home-hero{background:var(--navy);padding:4rem 2.5rem 3.5rem;position:relative;overflow:hidden}
+.home-hero::before{content:"";position:absolute;top:-60px;right:-60px;width:300px;height:300px;border:1px solid rgba(201,168,76,0.1);border-radius:50%}
+.home-hero::after{content:"";position:absolute;top:-30px;right:-30px;width:200px;height:200px;border:1px solid rgba(201,168,76,0.08);border-radius:50%}
+.hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.hero-title{font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:300;color:var(--white);line-height:1.15;margin-bottom:.5rem}
+.hero-title em{color:var(--gold);font-style:italic}
+.hero-subtitle{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.55);letter-spacing:.5px;margin-bottom:2rem}
+.hero-divider{width:60px;height:1px;background:var(--gold);margin-bottom:1.5rem}
+.hero-quote{font-family:"Cormorant Garamond",serif;font-size:18px;font-style:italic;color:rgba(255,255,255,0.8);line-height:1.6;max-width:520px;border-left:2px solid var(--gold);padding-left:1.2rem}
+.hero-cta{margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy);padding:.7rem 1.8rem;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s}
+.btn-gold:hover{background:var(--gold-light)}
+.btn-outline{background:transparent;color:var(--gold);padding:.7rem 1.8rem;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--gold);cursor:pointer;transition:all .2s}
+.home-intro{padding:3rem 2.5rem}
+.section-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;font-weight:500}
+.intro-text{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:300;line-height:1.7;color:var(--text-dark);max-width:680px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--gray-mid);margin-top:2.5rem}
+.value-item{padding:1.8rem 1.5rem;border-right:1px solid var(--gray-mid)}
+.value-item:last-child{border-right:none}
+.value-icon{width:32px;height:2px;background:var(--gold);margin-bottom:1rem}
+.value-title{font-family:"Cormorant Garamond",serif;font-size:17px;font-weight:500;color:var(--navy);margin-bottom:.5rem}
+.value-desc{font-size:13px;color:var(--gray-text);line-height:1.6}
+.page-header{background:var(--navy-mid);padding:2.5rem 2.5rem 2rem}
+.page-header h2{font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:300;color:var(--white);margin-bottom:.3rem}
+.page-header p{font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:.5px}
+.aree-content{padding:2rem 2.5rem}
+.area-block{margin-bottom:1.5rem;border:1px solid var(--gray-mid)}
+.area-header{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.5rem;background:var(--navy);cursor:pointer;transition:background .2s}
+.area-header:hover{background:var(--navy-light)}
+.area-name{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:400;color:var(--white)}
+.area-toggle{color:var(--gold);font-size:18px;transition:transform .3s}
+.area-block.open .area-toggle{transform:rotate(45deg)}
+.area-sub{display:none;padding:1rem 1.5rem 1.5rem}
+.area-block.open .area-sub{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.sub-item{display:flex;align-items:center;gap:.7rem;padding:.6rem .8rem;background:var(--gray-light);font-size:13px;color:var(--text-dark)}
+.sub-item::before{content:"";width:3px;height:3px;background:var(--gold);border-radius:50%;flex-shrink:0}
+.area-single{display:flex;align-items:center;gap:.8rem;padding:1.2rem 1.5rem;background:var(--navy);margin-bottom:1px}
+.area-single span{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:400;color:var(--white)}
+.come-content{padding:2.5rem}
+.step-list{display:flex;flex-direction:column}
+.step-item{display:flex;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid var(--gray-mid)}
+.step-item:last-child{border-bottom:none}
+.step-num{flex-shrink:0;width:44px;height:44px;background:var(--navy);color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.step-body h3{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:500;color:var(--navy);margin-bottom:.5rem}
+.step-body p{font-size:13.5px;color:var(--gray-text);line-height:1.65}
+.step-body ul{margin-top:.6rem;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:.3rem}
+.step-body ul li{font-size:13px;color:var(--gray-text);display:flex;align-items:center;gap:.5rem}
+.step-body ul li::before{content:"";width:4px;height:1px;background:var(--gold)}
+.info-box{background:var(--navy);padding:1.5rem 2rem;margin-top:2rem;display:flex;gap:1.2rem;align-items:flex-start}
+.info-box i{color:var(--gold);font-size:22px;flex-shrink:0;margin-top:2px}
+.info-box p{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.65}
+.info-box strong{color:var(--gold)}
+.contatti-wrap{background:var(--navy);padding:2.5rem}
+.contatti-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.contact-card{border:1px solid rgba(201,168,76,0.25);padding:1.5rem;background:var(--navy-mid)}
+.contact-card .cc-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;font-weight:500}
+.contact-card .cc-value{font-family:"Cormorant Garamond",serif;font-size:17px;color:var(--white);margin-bottom:1rem;line-height:1.4}
+.btn-action{display:flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.65rem 1.2rem;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;transition:background .2s;width:100%;justify-content:center}
+.btn-action:hover{background:var(--gold-light)}
+.msg-content{padding:2.5rem}
+.form-group{margin-bottom:1.2rem}
+.form-group label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray-text);margin-bottom:.5rem;font-weight:500}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.7rem 1rem;border:1px solid var(--gray-mid);background:var(--white);font-family:"Jost",sans-serif;font-size:14px;color:var(--text-dark);outline:none;transition:border .2s}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:130px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-privacy{display:flex;align-items:flex-start;gap:.7rem;margin:1rem 0}
+.form-privacy input{margin-top:3px;accent-color:var(--gold);flex-shrink:0}
+.form-privacy label{font-size:12px;color:var(--gray-text);line-height:1.5;cursor:pointer}
+.submit-row{display:flex;align-items:center;gap:1rem;margin-top:1rem}
+.success-msg{display:none;background:var(--navy);color:var(--gold);padding:.7rem 1.2rem;font-size:13px;align-items:center;gap:.5rem}
+@media(max-width:620px){nav ul li a{padding:.9rem .5rem;font-size:9px;letter-spacing:.5px}.values-grid,.contatti-grid,.form-row{grid-template-columns:1fr}.value-item{border-right:none;border-bottom:1px solid var(--gray-mid)}.hero-title{font-size:30px}}
+
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);cursor:pointer;text-decoration:none;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.wa-tooltip{position:absolute;right:66px;background:#25d366;color:#fff;font-family:"Jost",sans-serif;font-size:12px;font-weight:500;white-space:nowrap;padding:6px 12px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .2s}
+.wa-float:hover .wa-tooltip{opacity:1}
+.wa-channel-banner{background:linear-gradient(135deg,#1e5799 0%,#0d3d6b 100%);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.wa-channel-banner h3{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:400;color:#fff;margin-bottom:.4rem}
+.wa-channel-banner p{font-size:13px;color:rgba(255,255,255,0.7);line-height:1.5;max-width:480px}
+.wc-icon{flex-shrink:0;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.wc-icon svg{width:28px;height:28px;fill:#fff}
+.btn-wa-channel{display:inline-flex;align-items:center;gap:.5rem;background:#25d366;color:#fff;padding:.65rem 1.4rem;font-family:"Jost",sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s;flex-shrink:0}
+.btn-wa-channel:hover{background:#1da851}
+.btn-wa-channel svg{width:18px;height:18px;fill:#fff}
+
+.news-section{padding:3rem 2.5rem;background:var(--gray-light)}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.news-card{background:var(--white);border-top:3px solid var(--gold);padding:1.5rem;cursor:pointer;transition:box-shadow .2s;display:flex;flex-direction:column}
+.news-card:hover{box-shadow:0 4px 20px rgba(10,22,40,0.12)}
+.news-card .nc-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.6rem}
+.news-card .nc-title{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:500;color:var(--navy);line-height:1.3;margin-bottom:.8rem}
+.news-card .nc-date{font-size:11px;color:var(--gray-text);margin-bottom:.8rem}
+.news-card .nc-excerpt{font-size:13px;color:var(--gray-text);line-height:1.6;flex:1}
+.news-card .nc-link{margin-top:1rem;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:.4rem}
+.news-card .nc-link::after{content:"\2192"}
+
+/* Pagina articolo */
+.article-header{background:var(--navy-mid);padding:3rem 2.5rem 2rem}
+.article-header .a-cat{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1rem}
+.article-header h1{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:300;color:var(--white);line-height:1.3;margin-bottom:1rem;max-width:680px}
+.article-header .a-meta{font-size:12px;color:rgba(255,255,255,0.5)}
+.article-body{padding:2.5rem;max-width:720px}
+.article-body p{font-size:15px;line-height:1.8;color:var(--text-dark);margin-bottom:1.4rem}
+.article-body h2{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:500;color:var(--navy);margin:2rem 0 .8rem}
+.article-body .highlight-box{background:var(--gray-light);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:14px;color:var(--text-dark);line-height:1.6}
+.btn-back{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;background:none;padding:0;margin-bottom:1.5rem}
+.btn-back::before{content:"\2190"}
+@media(max-width:620px){.news-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="app">
+<nav>
+  <div class="nav-brand">
+    <svg viewBox="0 0 52 64" height="48" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2,2 L50,2 L50,34 Q50,54 26,62 Q2,54 2,34 Z" fill="#1e5799" stroke="#c9a84c" stroke-width="2.5"/>
+  <text x="26" y="16" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="7.5" fill="#c9a84c" letter-spacing="1.5">AVVOCATO</text>
+  <line x1="8" y1="20" x2="44" y2="20" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+  <text x="26" y="37" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="18" fill="#c9a84c" letter-spacing="2">MV</text>
+  <line x1="8" y1="42" x2="44" y2="42" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+  <polygon points="11,52 12.8,47 14.6,52 10,49 15.6,49" fill="#c9a84c"/>
+  <polygon points="20,52 21.8,47 23.6,52 19,49 24.6,49" fill="#c9a84c"/>
+  <polygon points="29,52 30.8,47 32.6,52 28,49 33.6,49" fill="#c9a84c"/>
+  <polygon points="38,52 39.8,47 41.6,52 37,49 42.6,49" fill="#c9a84c"/>
+</svg>
+    <div class="nav-text">
+      <span class="avv">Avvocato</span>
+      <span class="nm">Marco</span>
+      <span class="cg">Valentinotti</span>
+    </div>
+  </div>
+  <ul>
+    <li><a onclick="show('home')" class="active" id="nav-home">Home</a></li>
+    <li><a onclick="show('aree')" id="nav-aree">Aree</a></li>
+    <li><a onclick="show('come')" id="nav-come">Approccio</a></li>
+    <li><a onclick="show('contatti')" id="nav-contatti">Contatti</a></li>
+    <li><a onclick="show('messaggio')" id="nav-messaggio">Scrivici</a></li>
+  </ul>
+</nav>
+
+<!-- BANNER INSTALLA APP - appare solo su Android/Chrome automaticamente -->
+<div class="install-banner" id="install-banner">
+  <p><strong>&#128241; Installa l'App</strong> dello Studio sulla tua schermata Home</p>
+  <button class="btn-install" id="btn-install">&#43; Installa</button>
+  <button class="btn-close-b" onclick="document.getElementById('install-banner').style.display='none'">&#10005;</button>
+</div>
+
+<div id="screen-home" class="screen active">
+  <div class="home-hero">
+    <div class="hero-eyebrow">Avvocato &middot; Roma</div>
+    <div class="hero-title">Marco<br><em>Valentinotti</em></div>
+    <div class="hero-subtitle">Consulenza legale professionale</div>
+    <div class="hero-divider"></div>
+    <div class="hero-quote">La tutela dei vostri diritti &egrave; il nostro mandato. Ogni cliente &egrave; una storia unica che merita ascolto, competenza e dedizione assoluta.</div>
+    <div class="hero-cta">
+      <button class="btn-gold" onclick="show('contatti')">Richiedi Consulenza</button>
+      <button class="btn-outline" onclick="show('aree')">Aree di Attivit&agrave;</button>
+    </div>
+  </div>
+  <div class="home-intro">
+    <div class="section-label">Lo Studio</div>
+    <p class="intro-text">Con sede nel cuore di Roma, l'Avvocato Valentinotti affianca privati, famiglie e imprese in ogni percorso legale con rigore professionale, riservatezza e trasparenza.</p>
+    <div class="values-grid">
+      <div class="value-item"><div class="value-icon"></div><div class="value-title">Competenza</div><div class="value-desc">Formazione continua e specializzazione approfondita in ogni area di attivit&agrave;.</div></div>
+      <div class="value-item"><div class="value-icon"></div><div class="value-title">Riservatezza</div><div class="value-desc">Massima discrezione garantita in ogni fase del mandato professionale.</div></div>
+      <div class="value-item"><div class="value-icon"></div><div class="value-title">Trasparenza</div><div class="value-desc">Costi chiari e comunicazione diretta senza sorprese, fin dal primo incontro.</div></div>
+    </div>
+  </div>
+
+<div class="news-section">
+  <div class="section-label">Aggiornamenti</div>
+  <div class="intro-text" style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--text-dark)">News e Approfondimenti Legali</div>
+  <div class="news-grid">
+    <div class="news-card" onclick="showArticle('art1')">
+      <div class="nc-cat">Diritto di Famiglia</div>
+      <div class="nc-title">Separazione e affido condiviso: cosa cambia con le nuove norme</div>
+      <div class="nc-date">15 Maggio 2026</div>
+      <div class="nc-excerpt">La riforma Cartabia ha introdotto importanti novit&agrave; in materia di separazione e divorzio. Scopri come tutelare i tuoi diritti e quelli dei tuoi figli.</div>
+      <div class="nc-link">Leggi l&rsquo;articolo</div>
+    </div>
+    <div class="news-card" onclick="showArticle('art2')">
+      <div class="nc-cat">Diritto del Lavoro</div>
+      <div class="nc-title">Licenziamento illegittimo: diritti e tutele del lavoratore</div>
+      <div class="nc-date">28 Aprile 2026</div>
+      <div class="nc-excerpt">Cosa fare se si &egrave; stati licenziati senza giusta causa? Una guida pratica sui tempi, le tutele e le indennit&agrave; previste dalla legge italiana.</div>
+      <div class="nc-link">Leggi l&rsquo;articolo</div>
+    </div>
+    <div class="news-card" onclick="showArticle('art3')">
+      <div class="nc-cat">Diritto Condominiale</div>
+      <div class="nc-title">Liti condominiali: come risolvere le controversie senza andare in tribunale</div>
+      <div class="nc-date">10 Aprile 2026</div>
+      <div class="nc-excerpt">La mediazione &egrave; spesso obbligatoria nelle controversie condominiali. Ecco come funziona e perch&eacute; pu&ograve; essere la scelta pi&ugrave; conveniente.</div>
+      <div class="nc-link">Leggi l&rsquo;articolo</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="screen-articolo" class="screen">
+  <div class="article-header" id="art-header">
+    <button class="btn-back" onclick="show('home')">Torna alle News</button>
+    <div class="a-cat" id="art-cat"></div>
+    <h1 id="art-title"></h1>
+    <div class="a-meta" id="art-meta"></div>
+  </div>
+  <div class="article-body" id="art-body"></div>
+</div>
+
+<div id="screen-aree" class="screen">
+  <div class="page-header"><p class="section-label">Specializzazioni</p><h2>Aree di Attivit&agrave;</h2><p>Competenze multidisciplinari al servizio del cliente</p></div>
+  <div class="aree-content">
+    <div class="area-block" id="area-civile">
+      <div class="area-header" onclick="toggleArea('area-civile')"><span class="area-name">Diritto Civile</span><span class="area-toggle">+</span></div>
+      <div class="area-sub">
+        <div class="sub-item">Diritto di Famiglia</div><div class="sub-item">Risarcimento Danni</div>
+        <div class="sub-item">Contrattualistica e Locazioni</div><div class="sub-item">Diritto Condominiale</div>
+      </div>
+    </div>
+    <div class="area-single" style="margin-bottom:1px"><span>Diritto del Lavoro</span></div>
+    <div class="area-single" style="margin-bottom:1px"><span>Diritto Previdenziale</span></div>
+    <div class="area-single" style="margin-bottom:1px"><span>Diritto Tributario</span></div>
+    <div class="area-single"><span>Diritto dell'Immigrazione</span></div>
+  </div>
+</div>
+<div id="screen-come" class="screen">
+  <div class="page-header"><p class="section-label">Il Metodo</p><h2>Come Lavoro</h2><p>Un percorso chiaro, trasparente e orientato al risultato</p></div>
+  <div class="come-content">
+    <div class="step-list">
+      <div class="step-item"><div class="step-num">01</div><div class="step-body"><h3>Primo Contatto</h3><p>Il cliente contatta lo studio telefonicamente o via email per fissare un appuntamento.</p></div></div>
+      <div class="step-item"><div class="step-num">02</div><div class="step-body"><h3>Prima Consulenza &mdash; Cosa Portare</h3><p>Per permettere una valutazione precisa, &egrave; utile portare:</p><ul><li>Documento d'identit&agrave; in corso di validit&agrave;</li><li>Codice fiscale</li><li>Documentazione relativa alla vicenda</li><li>Eventuali atti giudiziari gi&agrave; ricevuti</li></ul></div></div>
+      <div class="step-item"><div class="step-num">03</div><div class="step-body"><h3>Analisi e Strategia</h3><p>Illustro le opzioni disponibili, i tempi stimati e i costi previsti. Ogni onorario viene concordato in anticipo e formalizzato per iscritto.</p></div></div>
+      <div class="step-item"><div class="step-num">04</div><div class="step-body"><h3>Aggiornamento Costante</h3><p>Il cliente viene tenuto informato ad ogni sviluppo con comunicazione diretta e comprensibile.</p></div></div>
+    </div>
+    <div class="info-box"><i class="ti ti-lock"></i><p><strong>Riservatezza assoluta garantita.</strong> Tutte le informazioni sono coperte dal segreto professionale nel pieno rispetto del GDPR.</p></div>
+  </div>
+</div>
+<div id="screen-contatti" class="screen">
+  <div class="page-header"><p class="section-label">Recapiti</p><h2>Contatti</h2><p>Sono a Roma, pronto ad ascoltarvi</p></div>
+  <div class="contatti-wrap">
+    <div class="contatti-grid">
+      <div class="contact-card"><div class="cc-label">Indirizzo</div><div class="cc-value">Viale delle Medaglie d'Oro, 266<br>00136 Roma (RM)</div><a class="btn-action" href="https://maps.google.com/?q=Viale+delle+Medaglie+d'Oro+266+Roma" target="_blank"><i class="ti ti-map-pin"></i> Apri in Maps</a></div>
+      <div class="contact-card"><div class="cc-label">Telefono</div><div class="cc-value">392 553 6295</div><a class="btn-action" href="tel:+393925536295"><i class="ti ti-phone"></i> Chiama Ora</a></div>
+      <div class="contact-card"><div class="cc-label">WhatsApp</div><div class="cc-value">392 553 6295</div><a class="btn-action" href="https://wa.me/393925536295?text=Salve%20Avvocato%20Valentinotti%2C%20vorrei%20richiedere%20una%20consulenza." target="_blank" style="background:#25d366;color:#fff"><i class="ti ti-brand-whatsapp"></i> Scrivici su WhatsApp</a></div>
+      <div class="contact-card"><div class="cc-label">Email</div><div class="cc-value">marcovalentinotti@gmail.com</div><a class="btn-action" href="mailto:marcovalentinotti@gmail.com?subject=Richiesta%20di%20Consulenza"><i class="ti ti-mail"></i> Invia un'Email</a></div>
+      <div class="contact-card"><div class="cc-label">Orari</div><div class="cc-value" style="font-size:14px">Lun &ndash; Ven: 9:00 &ndash; 18:00<br>Su appuntamento</div><button class="btn-action" onclick="show('messaggio')"><i class="ti ti-calendar"></i> Richiedi Appuntamento</button></div>
+    </div>
+  </div>
+</div>
+<div id="screen-messaggio" class="screen">
+  <div class="page-header"><p class="section-label">Modulo di Contatto</p><h2>Scrivimi</h2><p>Rispondo entro un giorno lavorativo</p></div>
+  <div class="msg-content">
+    <div class="form-row">
+      <div class="form-group"><label>Nome</label><input type="text" id="f-nome" placeholder="Mario"></div>
+      <div class="form-group"><label>Cognome</label><input type="text" id="f-cognome" placeholder="Rossi"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Telefono</label><input type="tel" id="f-tel" placeholder="+39 320 000 0000"></div>
+      <div class="form-group"><label>Email</label><input type="email" id="f-email" placeholder="mario@email.it"></div>
+    </div>
+    <div class="form-group"><label>Area di Interesse</label>
+      <select id="f-area">
+        <option value="">&#8212; Seleziona un'area &#8212;</option>
+        <option>Diritto Civile &#8211; Diritto di Famiglia</option><option>Diritto Civile &#8211; Risarcimento Danni</option>
+        <option>Diritto Civile &#8211; Contrattualistica e Locazioni</option><option>Diritto Civile &#8211; Condominio</option>
+        <option>Diritto del Lavoro</option><option>Diritto Previdenziale</option>
+        <option>Diritto Tributario</option><option>Diritto dell'Immigrazione</option><option>Altro</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Messaggio</label><textarea id="f-msg" placeholder="Descrivi brevemente la tua situazione."></textarea></div>
+    <div class="form-privacy"><input type="checkbox" id="f-privacy"><label for="f-privacy">Acconsento al trattamento dei miei dati personali ai sensi del D.Lgs. 196/2003 e del GDPR.</label></div>
+    <div class="submit-row">
+      <button class="btn-gold" onclick="submitForm()">Invia Messaggio</button>
+      <div class="success-msg" id="success-msg"><i class="ti ti-check"></i> Messaggio ricevuto &#8212; risponder&ograve; presto.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="wa-channel-banner">
+  <div class="wc-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.524 5.835L.057 23.885l6.218-1.632A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.88 9.88 0 01-5.031-1.377l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12C2.118 6.534 6.534 2.118 12 2.118S21.882 6.534 21.882 12 17.466 21.882 12 21.882z"/></svg></div>
+  <div>
+    <h3>Iscriviti al Canale WhatsApp</h3>
+    <p>Rimani aggiornato su novit&agrave; legali, consigli pratici e approfondimenti dello Studio Valentinotti direttamente su WhatsApp.</p>
+  </div>
+  <a class="btn-wa-channel" href="https://whatsapp.com/channel/0029Vb95ekqF1YlJ3AN9fn1q" target="_blank">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.524 5.835L.057 23.885l6.218-1.632A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.88 9.88 0 01-5.031-1.377l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12C2.118 6.534 6.534 2.118 12 2.118S21.882 6.534 21.882 12 17.466 21.882 12 21.882z"/></svg> Iscriviti ora
+  </a>
+</div>
+<script>
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("/sw.js").catch(function(){});
+}
+
+var deferredPrompt = null;
+window.addEventListener("beforeinstallprompt", function(e){
+  e.preventDefault();
+  deferredPrompt = e;
+  var banner = document.getElementById("install-banner");
+  banner.style.display = "flex";
+});
+window.addEventListener("appinstalled", function(){
+  document.getElementById("install-banner").style.display = "none";
+});
+document.getElementById("btn-install").addEventListener("click", function(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function(){
+      deferredPrompt = null;
+      document.getElementById("install-banner").style.display = "none";
+    });
+  }
+});
+
+function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));document.querySelectorAll("nav ul li a").forEach(a=>a.classList.remove("active"));document.getElementById("screen-"+id).classList.add("active");var el=document.getElementById("nav-"+id);if(el)el.classList.add("active");window.scrollTo(0,0);}
+function toggleArea(id){document.getElementById(id).classList.toggle("open")}
+function submitForm(){var nome=document.getElementById("f-nome").value.trim();var email=document.getElementById("f-email").value.trim();var privacy=document.getElementById("f-privacy").checked;if(!nome||!email){alert("Inserisci almeno nome ed email.");return;}if(!privacy){alert("\u00c8 necessario accettare la privacy policy.");return;}var subject=encodeURIComponent("Richiesta di Consulenza da "+nome);var area=document.getElementById("f-area").value;var msg=document.getElementById("f-msg").value;var body=encodeURIComponent("Nome: "+nome+" "+document.getElementById("f-cognome").value+"\nTel: "+document.getElementById("f-tel").value+"\nArea: "+area+"\n\nMessaggio:\n"+msg);window.location.href="mailto:marcovalentinotti@gmail.com?subject="+subject+"&body="+body;document.getElementById("success-msg").style.display="flex";}
+
+var articles = {
+  art1: {
+    cat: 'Diritto di Famiglia',
+    title: 'Separazione e affido condiviso: cosa cambia con le nuove norme',
+    date: '15 Maggio 2026 &mdash; Avv. Marco Valentinotti',
+    body: `
+      <p>La riforma Cartabia (D.Lgs. 149/2022) ha profondamente modificato le regole processuali in materia di separazione e divorzio, con particolare attenzione alla tutela dei minori e alla rapidit&agrave; dei procedimenti.</p>
+      <h2>Cosa prevede la riforma</h2>
+      <p>Il nuovo rito unificato per i procedimenti di famiglia semplifica l'iter giudiziario e introduce udienze presidenziali pi&ugrave; strutturate. L'obiettivo principale &egrave; ridurre i tempi dei procedimenti e favorire accordi tra le parti.</p>
+      <div class="highlight-box">
+        <strong>Da sapere:</strong> L'affido condiviso rimane la regola generale. L'affido esclusivo &egrave; disposto solo quando l'affido condiviso sia contrario all'interesse del minore.
+      </div>
+      <h2>I diritti dei figli</h2>
+      <p>La nuova normativa rafforza il diritto del minore a mantenere rapporti significativi con entrambi i genitori e con i parenti, inclusi i nonni. Il giudice pu&ograve; ora disporre specifici percorsi di mediazione familiare.</p>
+      <h2>Cosa fare</h2>
+      <p>Se stai affrontando una separazione, &egrave; fondamentale affidarsi a un professionista per valutare la situazione concreta e individuare la strategia pi&ugrave; adatta. Contattaci per una prima consulenza riservata.</p>
+    `
+  },
+  art2: {
+    cat: 'Diritto del Lavoro',
+    title: 'Licenziamento illegittimo: diritti e tutele del lavoratore',
+    date: '28 Aprile 2026 &mdash; Avv. Marco Valentinotti',
+    body: `
+      <p>Ricevere una lettera di licenziamento &egrave; sempre un momento difficile. &Egrave; fondamentale sapere che la legge italiana prevede tutele importanti per il lavoratore, a seconda del tipo di rapporto di lavoro e delle dimensioni aziendali.</p>
+      <h2>Licenziamento per giusta causa e giustificato motivo</h2>
+      <p>Il datore di lavoro pu&ograve; licenziare solo per giusta causa (mancanza grave che non consente la prosecuzione del rapporto) o per giustificato motivo soggettivo (inadempimento degli obblighi contrattuali) o oggettivo (ragioni economiche/organizzative).</p>
+      <div class="highlight-box">
+        <strong>Attenzione ai termini:</strong> Per impugnare un licenziamento hai 60 giorni dalla comunicazione per inviare l'impugnazione stragiudiziale e 180 giorni per depositare il ricorso in tribunale.
+      </div>
+      <h2>Le tutele previste</h2>
+      <p>A seconda delle dimensioni aziendali e della data di assunzione, il lavoratore pu&ograve; avere diritto alla reintegrazione nel posto di lavoro oppure a un'indennit&agrave; risarcitoria compresa tra 2 e 12 mensilit&agrave; dell'ultima retribuzione globale di fatto.</p>
+      <h2>Come tutelarsi</h2>
+      <p>Non aspettare: i termini per agire sono brevi. Contattaci immediatamente per una valutazione gratuita della tua situazione.</p>
+    `
+  },
+  art3: {
+    cat: 'Diritto Condominiale',
+    title: 'Liti condominiali: come risolvere le controversie senza andare in tribunale',
+    date: '10 Aprile 2026 &mdash; Avv. Marco Valentinotti',
+    body: `
+      <p>Le controversie condominiali sono tra le pi&ugrave; frequenti in Italia. Rumori, lavori non autorizzati, ripartizione delle spese: i motivi di lite tra condomini sono molteplici. Ma non sempre &egrave; necessario ricorrere al tribunale.</p>
+      <h2>La mediazione obbligatoria</h2>
+      <p>Per molte controversie condominiali la mediazione &egrave; condizione di procedibilit&agrave;: senza averla tentata, il giudice non pu&ograve; procedere. Questo strumento, gestito da organismi accreditati, permette spesso di trovare un accordo in tempi rapidi e con costi contenuti.</p>
+      <div class="highlight-box">
+        <strong>I vantaggi della mediazione:</strong> Tempi brevi (max 3 mesi), costi inferiori al processo, riservatezza totale, possibilit&agrave; di trovare soluzioni creative che un giudice non potrebbe imporre.
+      </div>
+      <h2>Quando &egrave; necessario il tribunale</h2>
+      <p>Se la mediazione fallisce o non &egrave; prevista, si procede con il ricorso al giudice. In questi casi &egrave; essenziale avere al proprio fianco un avvocato esperto che conosca la normativa condominiale e la giurisprudenza pi&ugrave; recente.</p>
+      <h2>Il nostro supporto</h2>
+      <p>Lo Studio Valentinotti assiste condomini e singoli condomini in tutte le fasi della controversia, dalla mediazione al giudizio. Contattaci per una prima analisi della tua situazione.</p>
+    `
+  }
+};
+
+function showArticle(id) {
+  var a = articles[id];
+  document.getElementById('art-cat').innerHTML = a.cat;
+  document.getElementById('art-title').innerHTML = a.title;
+  document.getElementById('art-meta').innerHTML = a.date;
+  document.getElementById('art-body').innerHTML = a.body;
+  show('articolo');
+}
+
+</script>
+<a class="wa-float" href="https://wa.me/393925536295?text=Salve%20Avvocato%20Valentinotti%2C%20vorrei%20richiedere%20una%20consulenza." target="_blank" aria-label="WhatsApp">
+  <span class="wa-tooltip">Scrivici su WhatsApp</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.524 5.835L.057 23.885l6.218-1.632A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.88 9.88 0 01-5.031-1.377l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12C2.118 6.534 6.534 2.118 12 2.118S21.882 6.534 21.882 12 17.466 21.882 12 21.882z"/></svg>
+</a>
+</body>
+</html>
